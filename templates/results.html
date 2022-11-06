@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book Rater - Results</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles/all.css') }}">
+	<link rel="icon" type="image/ico" href="{{url_for('static',filename='icons/logo.png')}}">
+</head>
+<body>
+	<a href="/"><h1 class="title">Book Rater</h1><br></a>
+	{% if session["user"]%}
+	<a href="/logout" class="logout"><img alt="Logout" src="{{url_for('static',filename='icons/logout.png')}}" style="width:50px;"></a>
+	{% endif %}
+	<form action="/result" method="post">
+		<input type="text" name="search" placeholder="Search..." class="search8">
+		<input type="Submit" name="submit" value="Search" class="searchb8">
+	</form>
+	<div class="result">
+		{% if l==0 %}
+		<h1 style="top:50%;">Book not found</h1>
+		{% else %}
+			{% for i in result %}
+			<a href="/book/{{i[0]}}">
+				<div class="eachbook">
+					<p class="resultrating">{{i[4]}}</p>
+					<img src="http://covers.openlibrary.org/b/isbn/{{i[0]}}-M.jpg" class="bookresultimg" alt="Image not available">
+					<p class="resulttitle">{{i[1]}}</p>
+					<u><p class="resultauthor">By:- {{i[2]}}</p></u>
+				</div>
+			</a>
+			<br>
+			{% endfor %}
+		{% endif %}
+	</div>
+</body>
+</html>

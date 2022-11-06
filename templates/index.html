@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book Rater - Home</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles/all.css') }}">
+	<meta charset="utf-8">
+	<link rel="icon" type="image/ico" href="{{url_for('static',filename='icons/logo.png')}}">
+</head>
+<body>
+	<a href="/"><h1 class="title">Book Rater</h1><br></a>
+	{% if session["user"]%}
+	<a href="/logout" class="logout"><img alt="Logout" src="{{url_for('static',filename='icons/logout.png')}}" style="width:50px;"></a>
+	{% endif %}
+	<p style="top:110px;width:100%;text-align:center;position:absolute;color:green;background-color:lightgreen;font-size:18pt;">{{success}}</p>
+	<button class="signup" onclick="location.href='/signup'">Sign up</button>
+	<button class="login" onclick="location.href='/login'">Login</button>
+	<button onclick="location.href='/search'" class="login" style="top:40%;">Search</button>
+	<button onclick="location.href='/all'" class="signup" style="top:40%;">All books</button>
+</body>
+</html>

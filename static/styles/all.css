@@ -1,0 +1,193 @@
+.title{
+	background-color:#33ccff;
+	font-family:Bookman, URW Bookman L, serif, bold;
+	font-size:65pt;
+	color:#660033;
+	text-shadow:4px 3px #80bfff;
+	width:100%;
+	margin-top:-7px;
+	margin-left:-10px;
+	position:absolute;
+	text-align:center;
+	height:105px;
+	top:9px;
+	letter-spacing: -3px;
+}
+.signup {
+	right: 50%;
+	top: 50%;
+	font-size:15pt;
+	height: 48px;
+	width:128px;
+	position: fixed;
+	font-family: "Copperplate",bold;
+	background-color:#cc0044;
+	color:white;
+}
+.login {
+	left: 50%;
+	top: 50%;
+	font-size:15pt;
+	width:128px;
+	height: 48px;
+	position: fixed;
+	font-family: "Copperplate",bold;
+	background-color:#cc0044;
+	color:white;
+}
+.rform{
+	top:40%;
+	position:fixed;
+}
+.flabel{
+	right:50%;
+	position:fixed;
+}
+.finput{
+	left:50%;
+	position:fixed;
+}
+.regsuccess{
+	top:42%;
+	width: 100%;
+	text-align: center;
+	position : fixed;
+	color: #ff033e;
+	text-shadow: 2px 2px #ff4671;
+	font-size: 29pt;
+	font-family: Bookman, URW Bookman L, serif,bold;
+}
+.textcenter{
+	top:55%;
+	width: 100%;
+	text-align: center;
+	position: fixed;
+}
+.h3{
+	width: 100%;
+	text-align: center;
+	position: fixed;
+}
+.search{
+	top:50%;
+	position: fixed;
+	width:89.2%;
+	height:25px;
+	background-color:#e3dac9;
+}
+.searchb{
+	width:10%;
+	position:fixed;
+	top:50%;
+	right:0%;
+}
+.alert{
+	top:32%;
+	width: 100%;
+	color:red;
+	background-color:pink;
+	font-size:16pt;
+	text-align: center;
+	position: fixed;
+}
+.success{
+    top: 36%;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    color: green;
+    background: lightgreen;
+    font-size: 15pt;
+}
+.logout{
+	top: 11px;
+	right:7px;
+	position: absolute;
+}
+.result{
+	margin-top:170px;
+	margin-right: 8%;
+	margin-left:1%;
+}
+.eachbook{
+	border:4px inset darkslateblue;
+	height: 215px;
+	border-radius: 12px;
+}
+.eachbook:hover{
+	background-color: lightgrey;
+}
+.bookresultimg{
+	float: left;
+	width: 170px;
+	height: 213px;
+	border:1px solid black;
+}
+.resulttitle{
+	font-size: 37pt;
+	font-family: Apple Chancery;
+	padding-left:190px;
+}
+.resultauthor{
+	font-family: Apple Chancery ;
+	font-size: 31pt;
+	padding-left:190px;
+
+}
+.resultrating{
+	float: right;
+	padding-top: 5px;
+	padding-right: 5px;
+	font-size: 15pt;
+}
+.book{
+	margin-top:170px;
+	margin-left:8%;
+	margin-right:10%;
+	height: 400px;
+}
+.bookimg{
+	float: left;
+	width:250px;
+}
+.booktitle{
+	font-family: OCR A Std, monospace ;
+	font-size: 40pt;
+	text-align: center;
+}
+.bookauthor{
+	font-size: 20pt;
+	text-align: center;
+}
+.reviews{
+	margin-top: 255px;
+	margin-bottom:20px;
+	border:2px solid;
+	border-radius: 4px;
+}
+.ruserid{
+	text-align: center;
+	border-bottom: 2px solid;
+	background:cadetblue;
+}
+.rreviews{
+	background: aquamarine;
+}
+.rrating{
+	float: right;
+	margin-top: 2px;
+	margin-right:8px;
+}
+.search8{
+	top:133px;
+	position: absolute;
+	width:89.2%;
+	height:25px;
+	background-color:#e3dac9;
+}
+.searchb8{
+	width:10%;
+	position:absolute;
+	top:133px;
+	right:0%;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{book[1]}}</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles/all.css') }}">
+	<link rel="icon" type="image/ico" href="{{url_for('static',filename='icons/logo.png')}}">
+
+</head>
+<body>
+	<a href="/"><h1 class="title">Book Rater</h1><br></a>
+	{% if session["user"]%}
+	<a href="/logout" class="logout"><img alt="Logout" src="{{url_for('static',filename='icons/logout.png')}}" style="width:50px;"></a>
+	{% endif %}
+	<div class="book">
+		<img src="http://covers.openlibrary.org/b/isbn/{{book[0]}}-L.jpg" class="bookimg">
+		<h1 class="booktitle">{{book[1]}}</h1>
+		<p class="bookauthor">By:- {{book[2]}}</p>
+		<p style="text-align: center;">Rating:-{{book[4]}}</p>
+		<p style="text-align: center;">Goodreads Rating:- {{book[5]}}</p>
+		<br><br>
+		{% if rated == 0%}
+			<form method="POST" style="text-align: center;padding-top: 35px;" action="/rate">
+				<input type="radio" name="rating" value="1" required>1</input>
+				<input type="radio" name="rating" value="2">2</input>
+				<input type="radio" name="rating" value="3">3</input>
+				<input type="radio" name="rating" value="4">4</input>
+				<input type="radio" name="rating" value="5">5</input><br>
+				<input type="text" name="review" placeholder="Review.(Optional)" style="width: 25%"><br>
+				<input type="hidden" name="url" id="url" value="">
+					<script type="text/javascript">
+						document.getElementById('url').value = window.location.href
+					</script>
+				<input type="submit" name="submit" value="Submit">
+			</form>
+		{% endif %}
+		<div style="margin-top:255px;margin-bottom:20px;">
+			{% for i in reviews %}
+				<div style="border: 2px solid; border-radius: 4px;">
+					<div class="ruserid">
+						<b>{{i[1]}}</b>
+						<p class="rrating">{{i[2]}}</p>
+					</div>
+					<div class="rreviews">
+						{{i[3]}}
+					</div>
+				</div>
+				<br>
+			{% endfor %}
+		</div>
+	</div>
+</body>
+</html>

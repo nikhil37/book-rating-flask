@@ -1,0 +1,79 @@
+.title{
+	background-color:#33ccff;
+	font-family:"Brush Script MT", Brush Script Std, cursive;
+	font-size:65pt;
+	color:#660033;
+	text-shadow:4px 3px #80bfff;
+	width:100%;
+	margin-top:-7px;
+	margin-left:-10px;
+	position:absolute;
+	text-align:center;
+}
+.signup {
+	right: 50%;
+	top: 50%;
+	font-size:15pt;
+	height: 48px;
+	width:128px;
+	position: fixed;
+	font-family: "Copperplate",bold;
+	background-color:#cc0044;
+	color:white;
+}
+.login {
+	left: 50%;
+	top: 50%;
+	font-size:15pt;
+	width:128px;
+	height: 48px;
+	position: fixed;
+	font-family: "Copperplate",bold;
+	background-color:#cc0044;
+	color:white;
+}
+.rform{
+	top:40%;
+	position:fixed;
+}
+.flabel{
+	right:50%;
+	position:fixed;
+}
+.finput{
+	left:50%;
+	position:fixed;
+}
+.regsuccess{
+	top:110px;
+	width: 100%;
+	text-align: center;
+	position : absolute;
+	color: green;
+	background-color: lightgreen;
+	font-size: 29pt;
+}
+.textcenter{
+	top:55%;
+	width: 100%;
+	text-align: center;
+	position: fixed;
+}
+.h3{
+	width: 100%;
+	text-align: center;
+	position: fixed;
+}
+.search{
+	top:50%;
+	position: fixed;
+	width:87%;
+	height:25px;
+	background-color:#e3dac9;
+}
+.searchb{
+	width:10%;
+	position:fixed;
+	top:50%;
+	right:0%;
+}

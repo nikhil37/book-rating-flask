@@ -1,0 +1,25 @@
+<!DOCTYPE html>	{% if session["user"]%}
+	<a class="logout" href="/logout">logout</a>
+	{% endif %}
+<html>
+<head>
+	<title>Book Rater - Sign in</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles/all.css') }}">
+	<meta charset="utf-8">
+	<link rel="icon" type="image/ico" href="{{url_for('static',filename='icons/logo.png')}}">
+</head>
+<body>
+	<a href="/"><h1 class="title">Book Rater</h1></a>
+	{% if session["user"]%}
+	<a href="/logout" class="logout"><img alt="Logout" src="{{url_for('static',filename='icons/logout.png')}}" style="width:50px;"></a>
+	{% endif %}
+	<p class="success">{{success}}</p>
+	<p class="alert">{{alert}}</p>
+	<form method="post" class="rform" action="/search">
+		<h2 class="h3">Sign in</h3><br><br><br><br>
+		<label class="flabel">Username:</label><input type="text" name="username" class="finput"><br><br>
+		<label class="flabel">Password:</label><input type="password" name="password" class="finput"><br><br>
+		<input type="Submit" name="submit" value="Log in" class="finput">
+	</form>
+</body>
+</html>

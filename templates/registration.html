@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Books Rater - Registration</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles/all.css') }}">
+	<meta charset="utf-8">
+	<link rel="icon" type="image/ico" href="{{url_for('static',filename='icons/logo.png')}}">
+</head>
+<body>
+	<a href="/"><h1 class="title">Registration</h1></a>
+	{% if session["user"]%}
+	<a href="/logout" class="logout"><img alt="Logout" src="{{url_for('static',filename='icons/logout.png')}}" style="width:50px;"></a>
+	{% endif %}
+	<p class="alert"> {{alert_message}}</p>
+	<form class="rform" action="/adduser" method="POST">
+		<label class="flabel">Username:</label><input type="text" name="username" class="finput"><br><br>
+		<label class="flabel">Password:</label><input type="password" name="password" class="finput"><br><br>
+		<label class="flabel">Re-enter password:</label><input type="password" name="repassword" class="finput"><br><br>
+		<input type="submit" name="submit" class="finput" value="Submit"><br>
+	</form>
+</body>
+</html>

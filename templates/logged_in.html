@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% if session["user"] %}
+	<title>Already logged in</title>
+	{% else %}
+	<title>Not logged in</title>
+	{% endif %}
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles/all.css') }}">
+	<meta charset="utf-8">
+	<link rel="icon" type="image/ico" href="{{url_for('static',filename='icons/logo.png')}}">
+</head>
+<body>
+	<a href="/"><h1 class="title">Book Rater</h1><br></a>
+	{% if session["user"]%}
+	<a href="/logout" class="logout"><img alt="Logout" src="{{url_for('static',filename='icons/logout.png')}}" style="width:50px;"></a>
+	<p style="top:50%;width:100%;font-size: 18pt; text-align: center;position: absolute;">Already logged in. <a href="/">Goto homepage.</a></p>
+	{% else %}
+	<p style="top:50%;width:100%;font-size: 18pt; text-align: center;position: absolute;">Not logged in. <a href="/login">Log in</a> or <a href="/signup">Register</a></p>
+	{% endif %}
+</body>
+</html>
